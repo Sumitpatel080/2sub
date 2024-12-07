@@ -50,3 +50,19 @@ async def full_userbase():
 async def del_user(user_id: int):
     await user_data.delete_one({'_id': user_id})
     return
+import sqlite3
+
+def save_channel_to_db(new_channel: str):
+    """
+    Save or update the subscription channel in the database.
+    """
+    try:
+        conn = sqlite3.connect("bot_database.db")
+        cursor = conn.cursor()
+        cursor.execute("REPLACE INTO force_subscriptions (id, channel_username) VALUES (1, ?)", (new_channel,))
+        conn.commit()
+        conn.close()
+        return True
+    except Exception as e:
+        print(f"Error saving channel to DB: {e}")
+        return False

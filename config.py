@@ -29,7 +29,7 @@ PORT = os.environ.get("PORT", "8095")
 
 #Database 
 DB_URI = "mongodb+srv://sunitverma080:jCOU0WgHZ9z2EEra@verification1.xqjkjto.mongodb.net/?retryWrites=true&w=majority&appName=Verification1"
-DB_NAME = os.environ.get("DATABASE_NAME", "tokenbota")
+DB_NAME = os.environ.get("DATABASE_NAME", "filesharexbot")
 
 SHORTLINK_URL = os.environ.get("SHORTLINK_URL", "modijiurl.com")
 SHORTLINK_API = os.environ.get("SHORTLINK_API", "6028a2c3aa9b66a0b6bab34245a5cd1b058f1781")
